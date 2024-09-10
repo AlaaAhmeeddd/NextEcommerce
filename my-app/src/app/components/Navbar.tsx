@@ -15,7 +15,7 @@ const links = [
 export default function Navbar() {
     const pathname = usePathname();
     return (
-        <header className="mb-8 border-b">
+        <header className="mb-8 border-b sticky shadow-md top-0 right-0 left-0 bg-white z-[1000]">
             <div className="flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl">
                 <Link href="/">
                     <h1 className="text-2xl md:text-3xl font-bold">
