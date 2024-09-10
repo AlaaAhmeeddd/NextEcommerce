@@ -1,3 +1,4 @@
+import AddToBag from "@/app/components/AddToBag";
 import ImageGallery from "@/app/components/ImageGallery";
 import { productDetails } from "@/app/interface";
 import { Button } from "@/components/ui/button";
@@ -15,6 +16,7 @@ async function getProductDetails(productSlug: string){
         description,
         "slug": slug.current,
         "categoryName": category->name,
+        price_id
     }`;
 
     const data = await client.fetch(query)
@@ -74,7 +76,14 @@ export default async function page({params} : {params: {slug: string}}) {
                             <span className="text-sm">2-4 Day Shipping</span>
                         </div>
                         <div className="flex gap-2.5">
-                            <Button>Add To Bag</Button>
+                            <AddToBag currency="USD" 
+                                description={product.description}
+                                name={product.name}
+                                price={product.price}
+                                image={product.images[0]}
+                                key={product._id}
+                                price_id={product.price_id}
+                            />
                             <Button variant={"secondary"}>Checkout Now</Button>
                         </div>
                         <p className="mt-12 text-base text-gray-500 tracking-wide">
