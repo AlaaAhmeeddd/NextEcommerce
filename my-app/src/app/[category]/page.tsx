@@ -2,16 +2,19 @@ import { simplifiedProduct } from "../interface";
 import { client } from "@/lib/sanity";
 import ProductsCards from "../components/ProductsCards";
 
-async function getData(cateogry: string) {
+async function getData(category: string) {
 
-    const query = `*[_type == "product" && category->name == "${cateogry}"] {
-            _id,
-            "imageUrl": images[0].asset->url,
-            price,
-            name,
-            "slug": slug.current,
-            "categoryName": category->name
-        }`;
+    const query = `*[_type == 'product' && category->name == "${category}"]{
+        price,
+        name,
+        description,
+        "slug": slug.current,
+        "categoryName": category->name,
+        price_id,
+        _id,
+        "imageUrl": images[0].asset->url,
+        price,
+    }`
     const data = await client.fetch(query);
 
     return data;

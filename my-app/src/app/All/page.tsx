@@ -5,12 +5,15 @@ import ProductsCards from "../components/ProductsCards"
 async function getData(){
 
     const query = `*[_type == 'product']{
-        _id,
         price,
         name,
-        "imageUrl": images[0].asset->url,
+        description,
         "slug": slug.current,
-        "categoryName": category->name
+        "categoryName": category->name,
+        price_id,
+        _id,
+        "imageUrl": images[0].asset->url,
+        price,
     }`
 
     const data = await client.fetch(query)
