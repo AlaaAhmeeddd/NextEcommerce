@@ -1,2 +1,2 @@
 # NextEcommerce
-Next.js 14 E-Commerce Website with Stripe, and Sanity.io
+Building an E-Commerce Website with Next.js 14, Stripe, Sanity.io, and a Shopping Cart involves a modern and powerful stack that leverages Next.js 14’s features, the flexibility of Sanity.io for content management, Stripe for payment processing, and Shopping Cart component is the backbone of any e-commerce website. It allows users to add items, modify quantities, and proceed to checkout. 
