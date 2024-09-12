@@ -5,8 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ShoppingBag } from "lucide-react";
 import { useShoppingCart } from "use-shopping-cart";
+import MobileNavbar from "./MobileNavbar";
 
-const links = [
+export const links = [
     { name: "Home", href: "/" },
     { name: "Men", href: "/Men" },
     { name: "Women", href: "/Women" },
@@ -45,7 +46,8 @@ export default function Navbar() {
                     </div>
                 ))}
                 </nav>
-                <div className="flex divide-x border-r sm:border-l">
+                <div className="flex gap-4 divide-x border-r items-center">
+                    <MobileNavbar />
                     <Button
                         variant={"outline"}
                         className="flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 rounded-none"
