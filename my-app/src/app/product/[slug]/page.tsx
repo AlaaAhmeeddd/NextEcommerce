@@ -7,6 +7,8 @@ import { client } from "@/lib/sanity"
 import { Star, Truck } from "lucide-react";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 async function getProductDetails(productSlug: string){
 
     const query = `*[_type == 'product' && slug.current == "${productSlug}"][0]{
