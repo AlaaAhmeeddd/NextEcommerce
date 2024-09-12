@@ -4,7 +4,7 @@ import ProductsCards from "../components/ProductsCards";
 
 async function getData(category: string) {
 
-    const query = `*[_type == 'product' && category->name == "${category}"]{
+    const query = `*[_type == 'product' && category->name == '${category}']{
         price,
         name,
         description,

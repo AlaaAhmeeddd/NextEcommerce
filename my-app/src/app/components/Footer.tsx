@@ -2,7 +2,7 @@
 export default function Footer() {
     return (
         <div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="relative -bottom-20 -z-[10]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="relative sm:-bottom-20 -bottom-6 -z-[10]">
                 <path fill="#7c3aed" fill-opacity="1" d="M0,96L60,112C120,128,240,160,360,144C480,128,600,64,720,58.7C840,
                     53,960,107,1080,128C1200,149,1320,139,1380,133.3L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,
                     320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
