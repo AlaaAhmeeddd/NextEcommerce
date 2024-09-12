@@ -20,6 +20,8 @@ async function getData(){
     return data
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function page() {
     const products: simplifiedProduct[] = await getData()
     return (
