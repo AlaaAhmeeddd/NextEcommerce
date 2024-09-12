@@ -1,4 +1,5 @@
 import AddToBag from "@/app/components/AddToBag";
+import CheckoutNow from "@/app/components/CheckoutNow";
 import ImageGallery from "@/app/components/ImageGallery";
 import { productDetails } from "@/app/interface";
 import { Button } from "@/components/ui/button";
@@ -84,7 +85,14 @@ export default async function page({params} : {params: {slug: string}}) {
                                 key={product._id}
                                 price_id={product.price_id}
                             />
-                            <Button variant={"secondary"}>Checkout Now</Button>
+                            <CheckoutNow currency="USD" 
+                                description={product.description}
+                                name={product.name}
+                                price={product.price}
+                                image={product.images[0]}
+                                key={product._id}
+                                price_id={product.price_id} 
+                            />
                         </div>
                         <p className="mt-12 text-base text-gray-500 tracking-wide">
                             {product.description}
